@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Project Page Directory — Summer Research School in Computational Biology & Bioinformatics</title>
+  <title>KI SOFO - Selected projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root{
@@ -100,14 +100,14 @@
 <body>
   <header class="site">
     <div class="wrap">
-      <h1>Summer Research School in Computational Biology &amp; Bioinformatics</h1>
-      <p class="lead">Project page directory — expandable entries for selected projects.</p>
+      <h1>SOFO Comp Bio - Selected projects</h1>
+      <p class="lead">A page with student projects from previous summers for Karolinska Institute's "Summer research school in computational biology and bioinformatics" for high school students.</p>
   </header>
 
   <main class="wrap">
     <section id="projects">
       <!-- ======== PROJECT 1 (placeholder) ======== -->
-      <details class="project" id="project-01" data-title="Project Title Placeholder #1" data-year="2025" open>
+      <details class="project" id="project-01" data-title="A linear time-complexity Hidden Markov Model for detecting PCR recombination in antibody repertoire sequencing datasets" data-year="2025" open>
         <summary class="project-summary">
           <div class="thumb" aria-hidden="true">
             <!-- Inline SVG placeholder image (16:9). Replace with <img src="path/to/your.jpg" alt="..."> if you have an image file. -->
@@ -126,12 +126,12 @@
             </svg>
           </div>
           <div class="meta-head">
-            <h2 class="title"><span class="project-title">Project Title Placeholder #1</span></h2>
-            <p class="subtitle">Brief one-line teaser describing the aim in neutral terms.</p>
+            <h2 class="title"><span class="project-title">A linear time-complexity Hidden Markov Model for detecting PCR recombination in antibody repertoire sequencing datasets</span></h2>
+            <p class="subtitle">Developing and implementing a novel algorithm to rapidly identify spurious sequences that pollute immunoinformatics datasets.</p>
             <div class="badges" aria-label="tags">
-              <span class="badge">genomics</span>
-              <span class="badge">methods</span>
-              <span class="badge">2025</span>
+              <span class="badge">next generation sequencing</span>
+              <span class="badge">immunoinformatics</span>
+              <span class="badge">2022</span>
             </div>
           </div>
         </summary>
@@ -140,53 +140,30 @@
           <section class="section">
             <h3>At-a-glance</h3>
             <div class="kv">
-              <div><strong>Students</strong></div><div>Student A, Student B</div>
-              <div><strong>Mentors</strong></div><div>Mentor X, Mentor Y</div>
-              <div><strong>School</strong></div><div>Summer 2025 cohort</div>
-              <div><strong>Keywords</strong></div><div>add; relevant; keywords; here</div>
-              <div><strong>Repo / Data</strong></div><div><em>placeholder</em> — link(s) can go here</div>
+              <div><strong>Students</strong></div><div>Aron Stålmarck</div>
+              <div><strong>Mentors</strong></div><div>Mark Chernyshev, Ben Murrell</div>
+              <div><strong>School</strong></div><div>Summer 2022 cohort</div>
+              <div><strong>Code</strong></div><div><a href=https://github.com/MurrellGroup/CHMMera.jl>https://github.com/MurrellGroup/CHMMera.jl</a></div>
             </div>
           </section>
 
           <section class="section">
             <h3>Abstract</h3>
             <p>
-              Placeholder text. Summarize the problem, approach, and key finding in 4–6 sentences. Keep it factual and concise.
-              Replace this paragraph with the real abstract when available.
+              Adaptive Immune Receptor Repertoire sequencing (AIRR-seq) has emerged as a central approach for studying T cell and B cell receptor populations, and is now an important component of studies of autoimmunity, immune responses to pathogens, vaccines, allergens, and cancers, and for antibody discovery. When amplifying the rearranged V(D)J genes encoding antigen receptors, each cycle of the Polymerase Chain Reaction (PCR) can produce spurious “chimeric” hybrids of two or more different template sequences. This project aimed to use a <a href=https://en.wikipedia.org/wiki/Hidden_Markov_model>Hidden Markov Model</a> (HMM) to take a collection of "reference" sequences, and identify query sequences that are spurious chimeras. Initially, the HMM was too slow, scaling with the square of the number of reference sequences (which can be in the hundreds for real-world problems) but we managed to identify some exploitable mathematical structure specific to our problem, and rewrite the HMM maths to be linear in the number of reference sequences, which provided a tractable solution to the problem.
             </p>
-          </section>
-
-          <section class="section">
-            <h3>Methods</h3>
-            <p>
-              Placeholder text describing the computational workflow, datasets, and evaluation setup. Mention software, parameters,
-              and any constraints. Use simple prose; include code snippets or links as needed.
-            </p>
-          </section>
-
-          <section class="section">
-            <h3>Results</h3>
-            <div class="media-grid">
+<div class="media-grid">
               <figure>
-                <img alt="Result figure placeholder" src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'><rect width='1600' height='900' fill='%23f9fafb'/><rect x='80' y='80' width='1440' height='740' fill='none' stroke='%23d1d5db' stroke-width='4' stroke-dasharray='10 8'/><text x='800' y='470' text-anchor='middle' font-family='Arial' font-size='46' fill='%239ca3af'>Figure placeholder</text></svg>">
-                <figcaption>Caption placeholder for figure 1.</figcaption>
+                <img alt="Result figure" src="https://github.com/user-attachments/assets/b5d10c9d-6bd7-4966-bc85-486a45700117">
               </figure>
-              <figure>
-                <video controls preload="metadata">
-                  <!-- Replace with a real MP4/WebM URL -->
-                  <source src="" type="video/mp4" />
-                </video>
-                <figcaption>Optional video demonstrating a result (placeholder).</figcaption>
+       		<figure>
+                <img alt="Image" src="https://github.com/user-attachments/assets/9eed3e49-b9d2-4904-be03-08eabec72d4a" />
               </figure>
             </div>
           </section>
-
-          <section class="section">
-            <h3>Discussion</h3>
-            <p>
-              Placeholder text discussing interpretation, limitations, and next steps.
-            </p>
-          </section>
+<p>
+This project began in the summer school, where the key algorithmic trick was figured out, but was developed much further, eventually being <a href="https://doi.org/10.1093/bioinformatics/btaf576">published in the journal Bioinformatics.</a>
+</p>
         </div>
       </details>
 
