@@ -285,7 +285,7 @@ This project began in the summer school, where the key algorithmic trick was fig
           <section class="section">
             <h3>At-a-glance</h3>
             <div class="kv">
-              <div><strong>Students</strong></div><div>B.H. and A.K.</div> 
+              <div><strong>Students</strong></div><div>B.H. and A.K.</div>  
               <div><strong>Mentors</strong></div><div>Aron Stålmarck and Ben Murrell</div>
               <div><strong>Cohort</strong></div><div>Summer 2025</div>
               <div><strong>Code</strong></div><div>
@@ -354,10 +354,7 @@ This project began in the summer school, where the key algorithmic trick was fig
             <p>
               Generative models for 3D molecules have immense potential in drug discovery and materials science. This project developed an autoregressive transformer-based architecture in the Julia language that constructs molecules atom-by-atom. Unlike models that generate entire molecular graphs simultaneously, this approach treats molecule building as a sequential growth process. For each step, the model predicts the next atom's chemical identity, its 3D displacement relative to a selected "anchor" atom, and a "climb" variable that selects the next anchor point for subsequent growth steps, effectively navigating the branching structure derived from SMILES strings.
             </p>
-          </section>
-
-          <section class="section">
-            <h3>Methods</h3>
+          
             <p>
               The <b>MOGMOG</b> architecture combines a multi-channel token encoder with a deep transformer trunk. The encoder integrates chemical identity, 3D coordinates, and sequence indices into a rich representation. A unique <b>Mixture of Gaussians (MoG)</b> decoder is used to model the continuous 3D displacement vectors, allowing the model to capture the multimodal spatial distributions of atom placements. The transformer's attention mechanism is further augmented by a learned <b>pairwise attention bias</b>, which incorporates relative 3D distances and structural relations between atoms at multiple length scales.
             </p>
