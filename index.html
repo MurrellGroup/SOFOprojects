@@ -161,7 +161,7 @@ This project began in the summer school, where the key algorithmic trick was fig
 
 
 
-  <details class="project" id="project-01" data-title="Flexible Invariant Point Attention" data-year="2023" open>
+      <details class="project" id="project-02" data-title="Flexible Invariant Point Attention" data-year="2023" open>
         <summary class="project-summary">
           <div class="thumb" aria-hidden="true">
             <img height="150" src="https://github.com/user-attachments/assets/661f6d2a-e9a5-4847-b565-9059bf318941">
@@ -172,12 +172,12 @@ This project began in the summer school, where the key algorithmic trick was fig
             <div class="badges" aria-label="tags">
               <span class="badge">deep learning</span>
               <span class="badge">proteins</span>
-              <span class="badge">2022</span>
+              <span class="badge">2023</span>
             </div>
           </div>
         </summary>
 
-        <div class="project-body" id="project-01-content">
+        <div class="project-body" id="project-02-content">
           <section class="section">
             <h3>At-a-glance</h3>
             <div class="kv">
@@ -193,15 +193,67 @@ This project began in the summer school, where the key algorithmic trick was fig
             <p>
               Transformer models power most of the recent developments in deep learning and AI. When transformers act on sequences of words, they must know what the word is, and where it is in the sentence so that the relationship to other words can be understood. However, when transformers act on something like the 3-dimensional structure of a protein, these relationships become spatial, with relative 3D position and rotation playing a central role. A large component of the success of AlphaFold 2, which won The 2024 Nobel Prize in Chemistry for protein folding, was the development of a transformer that is invariant to rotation and changes in position, which allows us to build deep learning systems that are <a href="https://en.wikipedia.org/wiki/Equivariant_map">equivariant</a> to rigid-body transformations. The goal of this project was to understand the Invariant Point Attention (IPA) layer from AlphaFold 2, and implement it in the Julia language, allowing for additional customization and flexibility.
             </p>
-<div class="media-grid">
+            <div class="media-grid">
               <figure>
                 <img alt="Image" src="https://github.com/user-attachments/assets/073b856b-0cbb-4152-a9e7-9b54cc2c8148" />
               </figure>
             </div>
           </section>
-<p>
-The flexibility afforded by this implementation allowed us to develop an "autoregressive" version of IPA, where each amino acid can be sampled in turn, which was developed into <a href="https://www.biorxiv.org/content/10.1101/2024.05.11.593685v1">a totally new kind of generative model for protein structures.</a>
-</p>
+          <p>
+            The flexibility afforded by this implementation allowed us to develop an "autoregressive" version of IPA, where each amino acid can be sampled in turn, which was developed into <a href="https://www.biorxiv.org/content/10.1101/2024.05.11.593685v1">a totally new kind of generative model for protein structures.</a>
+          </p>
+        </div>
+      </details>
+
+      <details class="project" id="project-03" data-title="Translationally Equivariant Positional Encodings for Protein Modeling" data-year="2025" open>
+        <summary class="project-summary">
+          <div class="thumb" aria-hidden="true">
+            <img height="150" src="https://github.com/user-attachments/assets/0c0f45bc-1046-4ac6-b811-29bb9a50207f">
+          </div>
+          <div class="meta-head">
+            <h2 class="title"><span class="project-title">Translationally Equivariant Positional Encodings for Protein Modeling</span></h2>
+            <p class="subtitle">Implementing learnable, translationally equivariant rotary position embeddings and applying them to side-chain rotamer sampling.</p>
+            <div class="badges" aria-label="tags">
+              <span class="badge">deep learning</span>
+              <span class="badge">proteins</span>
+              <span class="badge">2025</span>
+            </div>
+          </div>
+        </summary>
+
+        <div class="project-body" id="project-03-content">
+          <section class="section">
+            <h3>At-a-glance</h3>
+            <div class="kv">
+              <div><strong>Students</strong></div><div>[Student Names]</div>
+              <div><strong>Mentors</strong></div><div>Ben Murrell</div>
+              <div><strong>Cohort</strong></div><div>Summer 2025</div>
+              <div><strong>Code</strong></div><div>
+                <a href="https://github.com/MurrellGroup/Onion.jl/blob/main/src/positional-encoding/MultidimRoPE.jl">MultidimRoPE.jl</a>, 
+                <a href="https://github.com/MurrellGroup/Onion.jl/blob/main/src/positional-encoding/STRING.jl">STRING.jl</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h3>Abstract</h3>
+            <p>
+              Positional information is crucial for transformers to understand spatial relationships, but for 3D molecular structures, these encodings should ideally respect physical symmetries like translational equivariance. This project explored two different architectural approaches to multidimensional positional encoding. First, we implemented a <b>Multi-dimensional RoPE</b> that generalizes the original rotary position embedding (Su et al., 2021) by applying rotary transforms independently along each coordinate axis. Second, we implemented <b>STRING</b> (Schneck et al., 2025), a learnable rotary embedding designed to ensure true translational equivariance, where the model's internal representation remains invariant even as the molecule shifts in space.
+            </p>
+            <p>
+              We applied these architectures to the problem of protein side-chain rotamer sampling using <b>Flow Matching</b>—a modern generative modeling framework. By training the model to "flow" side-chain atoms from a random initial state toward their correct physical conformations, conditioned on the protein backbone, we developed a method that efficiently captures the complex geometric constraints between neighboring amino acids.
+            </p>
+            <div class="media-grid">
+              <figure>
+                <img alt="Protein side-chain sampling animation 1" src="https://github.com/user-attachments/assets/0c0f45bc-1046-4ac6-b811-29bb9a50207f" />
+                <figcaption>Generative sampling of protein side-chain rotamers using Flow Matching and translationally equivariant rotary embeddings.</figcaption>
+              </figure>
+              <figure>
+                <img alt="Protein side-chain sampling animation 2" src="https://github.com/user-attachments/assets/a22247d5-98d3-4f6f-bdbf-1ec95161d19c" />
+                <figcaption>Repeated independent side chain conformations sampled by the model, from the same backbone.</figcaption>
+              </figure>
+            </div>
+          </section>
         </div>
       </details>
 
